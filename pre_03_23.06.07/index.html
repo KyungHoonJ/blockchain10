@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>이것은 웹페이지의 제목입니다.</title>
+  </head>
+  <body>
+    <a href="./regist.html">회원가입</a>
+    <div>블록 요소, 가장 많이 사용하는 엘리먼트</div>
+    <p>문단을 출력하는 엘리먼트</p>
+    <p>블록 요소, 위아래로 외부 여백(margin)이 있음</p>
+    <span>인라인 요소</span>
+    <img src="" alt="" />
+    <div>img 엘리먼트는 이미지를 출력하는 엘리먼트</div>
+    <a href="https://naver.com">네이버</a>
+    <div>하이퍼링크 엘리먼트, 다른 문서로 이동한다.</div>
+    <button>버튼 엘리먼트</button>
+    <h1>제목을 출력하는 엘리먼트</h1>
+    <h2>제목2</h2>
+    <h3>제목3</h3>
+    <h4>제목4</h4>
+    <h5>제목5</h5>
+    <h6>제목6</h6>
+
+    <ol>
+      <li>ordered list, 순서가 있는 목록을 출력</li>
+      <li>
+        list, 목차를 나타내느 엘리먼트의 자식 엘리먼트로 목록내의 아이템을 출력
+      </li>
+    </ol>
+    <span>어떻게 나오니?</span>
+    <ul>
+      <li>unordered list, 순서가 없는 목록 출력</li>
+    </ul>
+    <!-- <div>1. 첫번째 목록</div>
+    <div>2. 두번째 목록</div> -->
+    <pre>
+우리가 입력하고싶은대로 입력해보세요
+줄바꿈도 상관 없습니다.
+마음대로
+     손 가는대로
+  우리가 입력한 그대로를 출력
+    </pre>
+    <span>어떻게 나오니?</span>
+    <input type="text" />
+    <input type="number" />
+    <input type="file" />
+    <input type="email" />
+    <input type="color" />
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <label for="">input 등에 대한 이름</label>
+    <div>
+      element는 여는 Tag와 닫는 Tag로 이루어진다. 속성(attribute)는 여는 Tag
+      옆에 입력하는 엘리먼트의 설정이다.
+    </div>
+    <div id="first-id">
+      속성에서 많이 사용하는 것들
+      <ol>
+        <li class="items first">
+          id : 특정한 엘리먼트를 나타내는 이름, 하나의 엘리먼트에 하나의 ID를
+          설정할 수 있다. 중복될 수 없다.
+        </li>
+        <li class="items second">
+          class : 엘리먼트의 클래스 이름을 정하여 묶음으로 설정할 수 있다.
+          중복될 수 있다.
+        </li>
+        <li>
+          src : 파일을 가져올 때 설정한다. 보통 img, video, audio 엘리먼트에서
+          설정한다. source
+        </li>
+        <li>
+          alt : 파일을 가져오기 못했을 때 출력하는 텍스트 설정
+          <img src="test.jpg" alt="이미지가 없어요." />
+        </li>
+        <li>charset : 데이터의 포멧을 설정, 유니코드 등</li>
+        <li>
+          type : 사용자가 입력한 데이터의 형식을 설정
+          <span style="color: red">text</span>
+          <span style="color: blue">number</span>
+          <span style="color: green">file</span>
+        </li>
+        <li>
+          for : label 엘리먼트에서 사용되며 input의 id 속성을 찾아 연결한다.
+          <label for="testing">라벨 실험</label>
+          <input type="text" id="testing" />
+          라벨을 클릭 시 for에 설정된 값과 같은 input의 id를 찾아 입력할 수 있게
+          커서를 옮겨준다.
+        </li>
+        <li>href : a 엘리먼트, 하이퍼링크의 주소 또는 파일 위치를 입력한다.</li>
+        <li>
+          style : id, class 등과 마찬가지로 모든 엘리먼트에 설정 가능한 속성.
+          엘리먼트가 어떻게 출력될 것인지를 설정
+        </li>
+      </ol>
+    </div>
+    <div id="first-id second-id">Javascript에서 찾을 수 없습니다.</div>
+    <div style="display: inline">확</div>
+    <div style="display: inline">인</div>
+    <div style="display: inline">해</div>
+    <div style="display: block">보죠</div>
+    <p style="margin: 0">문단을 입력했습니다.</p>
+    <span style="display: block">블락 넣은 스타일</span>
+    <span>어떻게 나올까요?</span>
+    <input type="text" placeholder="입력하지 않았을 때 출력할 텍스트" />
+    <div>
+      엘리먼트는 기본적으로 열었으면 닫아야한다. 한줄로 된, 자식 엘리먼트가 없는
+      엘리먼트의 경우 바로 닫을 수 있다.(ex : input) 끝에 /가 들어감
+    </div>
+    <div>
+      <img src="./test.jpg" alt="" />
+      cd 는 폴더를 이동하는 명령어. ".."은 상위 폴더로 이동한다.
+      <div>
+        windows에서는 dir 명령어를 사용해서 폴더 내 파일과 폴더 목록을 확인할 수
+        있다. Mac에서는 ls 명령어를 사용해서 dir과 같이 폴더 내 파일과 폴더를
+        확인할 수 있다.
+      </div>
+      <div>
+        img, video, audio, a 엘리먼트에서 사용하는 경로(src, href)에 대해서 ./는
+        현재 파일이 위치한 폴더를 기준으로 한다. ../는 현재 파일이 위치한 폴더의
+        상위 폴더로 이동해서 파일 또는 폴더를 찾게 된다.
+        <img src="./../pre_02_23.06.02/다운받은 이미지.jpg" alt="" />
+      </div>
+    </div>
+    <h1>github : https://github.com/KyungHoonJ/blockchain10</h1>
+  </body>
+</html>
