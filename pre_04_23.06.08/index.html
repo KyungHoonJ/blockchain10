@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      li {
+        /* 선택자 { CSS 속성 } */
+        /* li, div 등등 엘리먼트 이름을 선택자로 넣었을 때 유형 선택자 */
+        color: red;
+        background-color: black;
+        font-weight: 900;
+      }
+    </style>
+    <link rel="stylesheet" href="./public/css/index.css" />
+  </head>
+  <body>
+    <div id="root" class="items item2">
+      doc 입력으로 위 내용을 자동완성 가능하다. feat.VSCode
+    </div>
+    <div>CSS => Cascading Style Sheets</div>
+    <div style="color: red; background-color: blue; font-size: 50px">
+      스타일 속성 확인중
+    </div>
+    <ul>
+      <li>강수빈</li>
+      <li>김보람</li>
+      <li style="color: white; background-color: gray; font-weight: 900">
+        김태양
+      </li>
+      <li style="color: white; background-color: yellow; font-weight: 900">
+        김호현
+      </li>
+    </ul>
+    <ol>
+      <li>손건영</li>
+      <li>양원철</li>
+      <li>이선균</li>
+      <li>전상민</li>
+    </ol>
+    <div class="parent">
+      parent
+      <div class="child1" id="child">
+        child1
+        <div class="child2">child2</div>
+      </div>
+      <div class="child1">child1</div>
+    </div>
+  </body>
+</html>

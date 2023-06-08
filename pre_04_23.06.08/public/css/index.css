@@ -1,0 +1,56 @@
+ol li {
+  /* 여러 선택자를 띄어쓰기를 하여 작성하면 부모 엘리먼트 내의 자식 엘리먼트에게 속성을 부여한다. */
+  color: black;
+  background-color: lightgray;
+}
+
+/* 1. 유형 선택자 */
+div {
+}
+
+/* 2. id 선택자 */
+#root {
+  background-color: aqua;
+  color: #666;
+}
+
+/* class 선택자 */
+.items {
+  color: blueviolet;
+}
+
+.item2 {
+  font-weight: 900;
+}
+
+.parent {
+  font-size: 30px;
+}
+
+.child1 {
+  font-size: 20px;
+}
+
+.child2 {
+  font-size: 10px;
+}
+
+.parent .child1 {
+  font-size: 40px;
+}
+
+#child {
+  font-size: 5px;
+}
+
+#child.child1 {
+  /* 하나의 엘리먼트 child id와 child1 class를 모두 갖고있을 때 */
+  font-size: 16px;
+}
+
+/* 유형 : 1, 클래스 : 2, id : 3 */
+/* id는 클래스를 무조건 이긴다. */
+
+#child:hover {
+  background-color: green;
+}

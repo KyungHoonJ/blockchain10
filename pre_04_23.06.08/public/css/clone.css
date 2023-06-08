@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: url("../imgs/intro_bg_pc.png");
+  height: 1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo-box {
+  padding: 20px;
+}
+
+.logo-box a {
+  margin: auto;
+  width: 250px;
+  display: block;
+}
+
+.logo-box img {
+  width: 100%;
+}
+
+.header h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 900;
+  padding: 0 350px;
+}
+
+.header p {
+  color: #ccc;
+  font-size: 32px;
+  padding: 0 350px;
+}
