@@ -4,6 +4,36 @@ body {
   padding: 0;
 }
 
+.six-box {
+  padding: 0 350px;
+}
+
+.six-box .item {
+  width: 31%;
+  height: 300px;
+  margin: 1%;
+  background-color: black;
+  display: inline-block;
+}
+
+.flex-box {
+  padding: 0 350px;
+}
+
+.flex-box .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.flex-box .item {
+  width: 31%;
+  /* flex: 1;
+  gap: 10px; */
+  height: 300px;
+  background-color: red;
+}
+
 .header {
   background: url("../imgs/intro_bg_pc.png");
   height: 1000px;
@@ -32,8 +62,113 @@ body {
   padding: 0 350px;
 }
 
-.header p {
+.title-box p {
   color: #ccc;
   font-size: 32px;
   padding: 0 350px;
+}
+
+.title-box {
+  margin-top: 80px;
+}
+
+.button-box {
+  padding: 0 350px;
+}
+
+.button-box button {
+  width: 580px;
+  height: 100px;
+  font-size: 32px;
+  font-weight: 900;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: border-radius 0.5s linear;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.button-box button:hover {
+  border-radius: 100px;
+}
+
+.button-box p {
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.button-box div {
+  display: inline-block;
+}
+
+.bootcamp button {
+  background: linear-gradient(to right, blue, white);
+}
+
+.devel-rocket {
+  margin-left: 25px;
+}
+
+.devel-rocket button {
+  background: linear-gradient(to right, red, white);
+}
+
+.bootcamp p {
+  color: lightblue;
+}
+
+.devel-rocket p {
+  color: lightcoral;
+}
+
+/* .circle {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  border-radius: 100px;
+} */
+
+.why-kyungil div {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  position: relative;
+}
+
+.why-kyungil .transition-1 {
+  background-color: red;
+}
+
+.why-kyungil .transition-2 {
+  background-color: blue;
+}
+
+.why-kyungil .transition-3 {
+  background-color: green;
+}
+
+.why-kyungil:hover .transition-1 {
+  left: 1000px;
+  transition: left 5s linear;
+}
+
+.why-kyungil:hover .transition-2 {
+  left: 1000px;
+  transition: left 5s ease;
+}
+
+.why-kyungil:hover .transition-3 {
+  left: 1000px;
+  transition: left 5s ease-out;
+}
+
+.square {
+  width: 50%;
+  /* height: 50%; */
+  padding-bottom: 50%;
+  background-color: #f0f;
 }
