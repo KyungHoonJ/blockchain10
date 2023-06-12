@@ -1,0 +1,104 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1300px;
+  min-width: 300px;
+  width: 100%;
+  margin: auto;
+}
+
+#title {
+  margin: 16px 0;
+  text-align: center;
+}
+
+#title h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+.flex-box {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  min-width: 200px;
+  max-width: 250px;
+  margin: 10px 20px;
+  flex: 1;
+}
+
+.card::after {
+  content: "";
+  width: 100%;
+  padding-bottom: 138.46%;
+  display: block;
+}
+
+.card .inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card button img {
+  position: absolute;
+  width: 220%;
+}
+
+.card:nth-child(2n-1) button img {
+  left: -4%;
+  top: -6%;
+}
+
+.card:nth-child(2n) button img {
+  left: -113%;
+  top: -5%;
+}
+
+.card button div {
+  z-index: 10;
+  font-size: 32px;
+  font-weight: 900;
+  color: white;
+}
+
+.card button div {
+  text-shadow: 3px 3px #000;
+}
+
+.card:nth-child(2n-1) a button div {
+  text-shadow: 3px 3px #008;
+}
+
+.card:nth-child(2n) a button div {
+  text-shadow: 3px 3px #800;
+}
