@@ -6,10 +6,53 @@
   </head>
   <body>
     <div id="root">
-      <form action="#">
-        <input type="text" name="id" id="id" />
+      <form action="">
+        <fieldset>
+          <legend>필수 정보</legend>
+          <input type="text" name="id" id="id" />
+          <label for="id">아이디</label>
+          <input type="password" name="pw" id="pw" />
+        </fieldset>
+        <input type="number" name="age" placeholder="나이" />
+        <input type="email" id="email" placeholder="메일주소" />
+        <label for="married">
+          <input type="checkbox" id="married" />
+          결혼유무
+        </label>
+        <input type="radio" name="gender" id="man" value="man" />
+        <label for="man">남자</label>
+        <input type="radio" name="gender" id="woman" value="woman" />
+        <label for="woman">여자</label>
+        <input type="date" name="birthday" id="birthday" />
+        <label for="birthday">생일</label>
+        <input type="color" name="color" id="color" />
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="자기소개"
+        ></textarea>
+        <label for="like">
+          좋아하는건?
+          <select name="like" id="like">
+            <option value="apple">사과</option>
+            <option value="banana">바나나</option>
+            <option value="computer">컴퓨터</option>
+            <option value="phone">스마트폰</option>
+          </select>
+        </label>
+        <button type="reset">reset</button>
+
+        <!-- <input type="text" name="q" placeholder="q" />
+        <input type="text" name="oq" placeholder="oq" />
+        <input type="text" name="aqs" placeholder="aqs" />
+        <input type="text" name="sourceid" placeholder="sourceid" />
+        <input type="text" name="ie" placeholder="ie" /> -->
         <button>보내기</button>
       </form>
+      <label for="pw">비밀번호</label>
+      &#60; &#62;
     </div>
   </body>
 </html>
