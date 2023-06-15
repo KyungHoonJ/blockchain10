@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap"); /* #css-file .display {margin: 50px;} */
+#css-file {
+  padding: 50px 100px 10px 20px;
+}
+#css-file .display div {
+  display: block;
+  display: inline;
+  display: inline-block;
+  display: none;
+}
+#css-file .text {
+  color: crimson;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: "굴림";
+  font-family: "돋움";
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-style: oblique;
+  font-style: normal;
+  text-shadow: 10px 10px 0 black;
+  text-align: center;
+  text-align: end;
+  text-decoration: underline solid blue;
+  text-decoration: overline dotted black;
+  text-decoration: line-through dashed green;
+  text-decoration-color: red;
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
+  letter-spacing: 10px;
+  line-height: 100px; /* font-family: "Freehand", cursive; */
+  font-family: "Gasoek One", sans-serif;
+}
+#css-file .position {
+  position: relative;
+}
+#css-file .position div {
+  /* position: relative; */
+  position: absolute; /* position: fixed; */
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  bottom: 10px; /* width: 100px; */ /* height: 100px; */
+  background-color: brown;
+}
+#css-file .overflow {
+  overflow: scroll;
+  height: 50px;
+}
+#css-file .background div {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+#css-file .background :nth-child(1) {
+  background-color: #f00;
+  background-image: url("./giraffes-gc7af0be3d_1280.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#css-file .background :nth-child(2) {
+  background-color: #ff0;
+  background-image: url("./giraffes-gc7af0be3d_1280.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#css-file .background :nth-child(3) {
+  background-color: #f0f;
+  background-image: url("./giraffes-gc7af0be3d_1280.jpg");
+  background-size: 100px 100px;
+  background-repeat: repeat-x;
+  background-position: bottom right;
+}
+#css-file .background :nth-child(4) {
+  background-color: #0ff;
+  background: linear-gradient(45deg, blue 10%, red 50%, blue 90%);
+  background: radial-gradient(red, blue);
+}

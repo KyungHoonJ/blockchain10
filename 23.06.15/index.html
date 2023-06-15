@@ -1,0 +1,118 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      /* selector - 선택자*/ /* *은 전체 선택자, 모든 엘리먼트에 전부 적용을 합니다. */
+      * {
+        /* color: red; */
+      } /* 유형 선택자, 엘리먼트의 이름을 선택자로써 사용합니다. */
+      div {
+        background-color: beige;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      } /* 클래스 선택자, 앞에 .을 붙여서 클래스 선택자라는 것을 알려줍니다. */
+      .red-text {
+        color: red;
+      }
+      .bg-y {
+        background-color: yellow;
+      } /* 아이디 선택자 */
+      #root {
+        margin-top: 100px;
+      } /* 특성 선택자, 엘리먼트의 속성을 찾아서 일치하는 엘리먼트에게 CSS 속성을 적용한다. */
+      [target="_blank"] {
+        font-size: 32px;
+      }
+      [id="root"] {
+        padding: 32px;
+      } /* combinator, 결합자 라고 부릅니다. */ /* ` `는 자손 결합자, 부모를 기준으로 하위 모든 선택자를 찾습니다. */
+      #parent .child {
+        font-size: 2rem;
+      } /* ` > ` 자식 결합자, 바로 아래의 자식에게만 적용됩니다. */
+      #parent > .child {
+        font-size: 1.5rem;
+      } /* ` ~ ` 형제 결합자, 같은 부모를 가진 엘리먼트들 중 현재 엘리먼트의 뒤에 있는 엘리먼트를 찾는다. */
+      .grandson ~ .granddaughter {
+        color: rgba(0, 0, 0, 0.5);
+      } /* ` + ` 인접형제 결합자, 바로 뒤에 있는 형제를 찾습니다. */
+      .grandson + .granddaughter {
+        color: rgba(100, 50, 25, 1);
+      }
+      .grandson.child {
+        color: red;
+      } /* pseudo class, 의사 클래스 */
+      .granddaughter:last-child {
+        background-color: rgba(255, 100, 0, 0.5);
+      }
+      .red-text:hover {
+        color: white;
+        background-color: black;
+      } /* pseudo element, 의사 요소 */
+      .granddaughter::before {
+        content: " 손녀입니다.";
+        color: white;
+        background-color: black;
+      }
+    </style>
+    <link rel="stylesheet" href="public/index.css" />
+  </head>
+  <body>
+    <div id="css-file">
+      <div class="display">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="text">text testing, 글자 확인중, 뷁</div>
+      <div class="position">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="overflow">보이지 않아야 합니다.</div>
+      <div class="background">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div>
+      <h1>CSS</h1>
+      <p>
+        HTML 문서가 웹페이지를 출력해주는 파일이다.<br />웹페이지를
+        출력하는데있어서 방식은 구조를 만드는 방식이다.<br />모양을 만들때는?
+        style이라는 속성을 사용할 수 있다. style 엘리먼트의자식으로 CSS 문법을
+        사용해서 설정할 수 있다. CSS 파일을 불러와서 설정할수 있다.
+      </p>
+    </div>
+    <div id="root">
+      <div style="color: green">style 속성으로 색상 설정</div>
+      <div class="red-text bg-y">클래스 선택자 적용</div>
+      <a href="naver.com">네이버</a
+      ><a href="naver.com" target="_blank">네이버</a>
+      <div id="parent">
+        parent
+        <div class="child">
+          child
+          <div class="granddaughter">granddaughter</div>
+          <div class="grandson">
+            grandson
+            <div class="grandson child">grandson child</div>
+          </div>
+          <div class="granddaughter">granddaughter</div>
+          <div class="granddaughter">granddaughter</div>
+        </div>
+        <div class="child">
+          child
+          <div class="granddaughter">granddaughter</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
