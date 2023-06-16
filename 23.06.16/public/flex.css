@@ -1,0 +1,26 @@
+.flex-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: end;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  height: 200px;
+  align-items: center;
+  align-items: stretch;
+
+  flex-direction: column;
+}
+
+.flex-box div {
+  /* flex: 1; */
+  min-width: 100px;
+  background-color: black;
+  min-height: 50px;
+}
+
+.flex-box div:nth-child(2n) {
+  background-color: red;
+}
