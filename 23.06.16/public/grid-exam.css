@@ -1,0 +1,70 @@
+.grid {
+  display: inline-grid;
+  vertical-align: top;
+
+  grid-template-columns: 40px 60px 20px 40px 20px 40px 20px 40px repeat(5, 20px) 60px 20px 60px 40px;
+  grid-template-rows: repeat(2, 10px) 20px 40px repeat(8, 20px) 40px 20px 20px;
+
+  grid-template-areas:
+    ". . . . . . . . . . . item04 item04 item04 . . ."
+    ". . . . . . . . . . . item04 item04 item04 . item05 ."
+    ". . . item02 item02 item02 . . . . . item04 item04 item04 . item05 ."
+    ". item01 . item02 item02 item02 . item03 item03 item03 . item04 item04 item04 . item05 ."
+    ". item01 . item02 item02 item02 . item03 item03 item03 . item04 item04 item04 . . ."
+    ". item01 . . . . . . . . . item04 item04 item04 . item06 item06"
+    ". . . item07 . item08 item08 item08 . . . . . . . item06 item06"
+    "item09 item09 . item07 . item08 item08 item08 . item10 item10 item10 . item11 . item06 item06"
+    "item09 item09 . item07 . item08 item08 item08 . item10 item10 item10 . item11 . . ."
+    "item09 item09 . . . item08 item08 item08 . item10 item10 item10 . item11 . item12 item12"
+    "item09 item09 . item13 . item08 item08 item08 . . . . . . . item12 item12"
+    "item09 item09 . item13 . item08 item08 item08 . item14 item14 item14 item14 item14 . item12 item12"
+    ". . . item13 . item08 item08 item08 . item14 item14 item14 item14 item14 . item12 item12"
+    ". . . . . . . . . item14 item14 item14 item14 item14 . . .";
+}
+
+.grid > div {
+  border: 1px solid black;
+}
+
+.grid > div:nth-child(1) {
+  grid-area: item01;
+}
+.grid > div:nth-child(2) {
+  grid-area: item02;
+}
+.grid > div:nth-child(3) {
+  grid-area: item03;
+}
+.grid > div:nth-child(4) {
+  grid-area: item04;
+}
+.grid > div:nth-child(5) {
+  grid-area: item05;
+}
+.grid > div:nth-child(6) {
+  grid-area: item06;
+}
+.grid > div:nth-child(7) {
+  grid-area: item07;
+}
+.grid > div:nth-child(8) {
+  grid-area: item08;
+}
+.grid > div:nth-child(9) {
+  grid-area: item09;
+}
+.grid > div:nth-child(10) {
+  grid-area: item10;
+}
+.grid > div:nth-child(11) {
+  grid-area: item11;
+}
+.grid > div:nth-child(12) {
+  grid-area: item12;
+}
+.grid > div:nth-child(13) {
+  grid-area: item13;
+}
+.grid > div:nth-child(14) {
+  grid-area: item14;
+}
