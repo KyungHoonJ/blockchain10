@@ -32,6 +32,7 @@
 .buttons {
   display: flex;
   gap: 25px;
+  padding: 3rem 0;
 }
 
 .buttons button {
@@ -41,6 +42,13 @@
   border: none;
   color: white;
   font-weight: 900;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transition: border-radius 0.5s linear;
+  font-size: 1.5rem;
+}
+
+.buttons button:hover {
+  border-radius: 7rem;
 }
 
 .bootcamp,
@@ -49,6 +57,35 @@
   height: 40px;
 }
 
+.bootcamp button {
+  background: linear-gradient(to right, skyblue, white);
+}
+
+.bootcamp ul {
+  /* font-size: 35px; */
+  color: lightblue;
+}
+
+.develrocket ul {
+  /* font-size: 35px; */
+  color: lightpink;
+}
+
+.develrocket button {
+  background: linear-gradient(to right, fuchsia, lightpink);
+}
+
 .buttons ul li {
   display: inline;
+}
+
+.buttons ul {
+  /* font-size: 1rem; */
+  font-weight: 900;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#header .bootcamp p {
+  padding: 25px 0;
 }
