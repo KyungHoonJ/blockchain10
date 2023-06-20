@@ -1,6 +1,7 @@
 #header {
   background-image: url("./imgs/intro_bg_pc.png");
   height: 1000px;
+  display: none;
 }
 
 #header .logo {
