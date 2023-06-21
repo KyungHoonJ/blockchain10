@@ -1,0 +1,51 @@
+#why {
+  margin: 7rem 0;
+}
+
+#why h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: blueviolet;
+  margin: 4rem 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  6% {
+    transform: translateY(-17.5%);
+  }
+  33.3% {
+    transform: translateY(-17.5%);
+  }
+  39.3% {
+    transform: translateY(-35%);
+  }
+  66.6% {
+    transform: translateY(-35%);
+  }
+  72.6% {
+    transform: translateY(-52%);
+  }
+  100% {
+    transform: translateY(-52%);
+  }
+}
+
+#why .slide {
+  height: 14rem;
+  overflow: hidden;
+  /* background-color: aqua; */
+  /* animation: slide 2s linear; */
+}
+
+#why .slide div {
+  animation: slide 5s linear infinite;
+}
+
+#why .slide h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
