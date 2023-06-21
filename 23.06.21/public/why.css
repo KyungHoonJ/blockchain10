@@ -48,4 +48,122 @@
   font-size: 2.5rem;
   text-align: center;
   margin: 1rem 0;
+  color: darkblue;
+  opacity: 0.1;
+}
+
+@keyframes text1 {
+  0% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  6% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  33.3% {
+  }
+  39.3% {
+  }
+  66.6% {
+  }
+  72.6% {
+  }
+  100% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+}
+
+#why .slide div h2:nth-child(2) {
+  animation: text1 5s linear infinite;
+}
+
+@keyframes text2 {
+  0% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  6% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  33.3% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  39.3% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  66.6% {
+  }
+  72.6% {
+  }
+  100% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+}
+
+#why .slide div h2:nth-child(3) {
+  animation: text2 5s linear infinite;
+}
+
+@keyframes text3 {
+  0% {
+  }
+  6% {
+  }
+  33.3% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  39.3% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  66.6% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  72.6% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  100% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+}
+
+#why .slide div h2:nth-child(4) {
+  animation: text3 5s linear infinite;
+}
+
+@keyframes text4 {
+  0% {
+  }
+  6% {
+  }
+  33.3% {
+  }
+  39.3% {
+  }
+  66.6% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  72.6% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+}
+
+#why .slide div h2:nth-child(5) {
+  animation: text4 5s linear infinite;
 }
