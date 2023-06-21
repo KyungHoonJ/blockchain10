@@ -1,0 +1,87 @@
+#header {
+  background-image: url("./imgs/intro_bg_pc.png");
+  height: 1000px;
+  display: none;
+}
+
+#header .logo {
+  /* margin: auto; */
+  /* margin-top: 50px; */
+  padding: 40px 0;
+  text-align: center;
+}
+
+#header .logo img {
+  width: 250px;
+}
+
+#header .text {
+  color: white;
+}
+
+#header .text h1 {
+  font-size: 2.5rem;
+}
+
+#header .text p {
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+#header .buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+#header .buttons div {
+  flex: 1;
+  /* padding: 0 1rem; */
+}
+
+/* #header .buttons div:first-child {
+  padding-right: 0.5rem;
+}
+
+#header .buttons div:last-child {
+  padding-left: 0.5rem;
+} */
+
+#header .buttons button {
+  width: 100%;
+  /* padding: 35px; */
+  height: 8rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  border: none;
+  transition: border-radius 0.5s linear;
+}
+
+#header .buttons button:hover {
+  border-radius: 5rem;
+}
+
+#header .buttons p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-weight: 900;
+}
+
+#header .bootcamp button {
+  background: linear-gradient(to right, dodgerblue, lightblue);
+}
+
+#header .bootcamp p {
+  color: lightblue;
+}
+
+#header .develrocket button {
+  background: linear-gradient(to right, fuchsia, lightpink);
+}
+
+#header .develrocket p {
+  color: lightpink;
+}
