@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: calc(1300px + 6rem);
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.title-box {
+  text-align: center;
+}
+
+.title-box h1 {
+  font-size: 1.2rem;
+  color: blueviolet;
+}
+
+.title-box h2 {
+  font-size: 2.5rem;
+  word-break: keep-all;
+}
+
+.square {
+  position: relative;
+}
+
+.square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  /* 1920 * 1080 비율로 바꿔봅시다 */
+  /* padding-bottom: calc(1080 / 1920 * 100%); */
+}
+
+.square > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title-box h1 {
+    font-size: 1rem;
+  }
+
+  .title-box h2 {
+    font-size: 1.5rem;
+  }
+}
