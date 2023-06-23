@@ -1,0 +1,88 @@
+#guide {
+  background-color: lightsteelblue;
+  padding: 7rem 0;
+}
+
+#guide .text-box {
+  color: white;
+  text-align: center;
+}
+
+#guide .text-box span {
+  font-size: 1.3rem;
+}
+
+#guide .text-box p {
+  font-weight: 900;
+  opacity: 0.5;
+}
+
+#guide .step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#guide .step .box-wrapper {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#guide .step .box-wrapper .item-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+#guide .step .box-wrapper .item-box > div {
+  padding: 1rem 0.5rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1rem;
+  font-weight: 900;
+}
+
+#guide .step .box-wrapper .item-box h1,
+#guide .step .box-wrapper .item-box h2 {
+  margin: 0;
+}
+
+#guide .step .box-wrapper .item-box h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: yellow;
+}
+
+#guide .step .box-wrapper .item-box h1 {
+  color: white;
+}
+
+#guide .step .box-wrapper:first-child .item-box:first-child div:first-child {
+  background-color: cadetblue;
+}
+
+#guide .step .box-wrapper:first-child .item-box div:first-child {
+  background-color: darkorchid;
+}
+#guide .step .box-wrapper .item-box:first-child div:first-child {
+  background-color: blueviolet;
+}
+
+#guide .step .bg-gradiant {
+  background: linear-gradient(to bottom, darkorchid, blueviolet);
+}
+
+#guide .footer {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+  color: blue;
+}

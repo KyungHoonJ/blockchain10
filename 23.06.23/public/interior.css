@@ -1,3 +1,7 @@
+#interior {
+  display: none;
+}
+
 #interior .pictures {
   /* display: flex; */
   /* flex-wrap: wrap; */
