@@ -1,0 +1,82 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script>
+      // 자바스크립트 입력하는 엘리먼트
+      number = 1;
+      //   1+2 = 3
+      console.log(number);
+      console.log("안녕하세요");
+      //   안녕하세요
+      string = "이것은 글자입니다.";
+      console.log(string);
+      안녕하세요 = "이것은 안녕하세요 입니다.";
+      console.log(안녕하세요);
+      `이것도 문자입니다.`;
+      bool = true;
+      // boolean
+      unde = undefined;
+      nul = null;
+      //   console.log(이런거없어);
+      // 위처럼 쓰면 혼납니다.
+
+      var varNumber = 2;
+      var varString = "이것은 변수 문자열 입니다.";
+      console.log(varNumber);
+      console.log(varString);
+      var varUnde;
+      console.log(varUnde);
+      var varSymbol = Symbol('"여기에 값을 넣습니다.');
+      console.log(varSymbol);
+
+      // 위는 ES5 이전이며 아래는 ES6 이후이다
+
+      let letNumber = 23;
+      const constNumber = 23;
+
+      var varNumber = 32;
+      console.log(varNumber);
+
+      letNumber = 32;
+      console.log(letNumber);
+
+      //   constNumber = 23;
+
+      //   console.log(tempValue);
+      //   console.log(tempLetValue);
+      var tempValue;
+      let tempLetValue;
+      console.log(tempValue);
+      console.log(tempLetValue);
+      //   1 + 2 = 3
+
+      // 카멜형
+      // tempLetValue => temp let value
+      // 파스칼형
+      // TempLetValue => temp let value << 클래스
+      // 스네이크형
+      // temp_let_value
+      // 케밥 표기법
+      // temp-let-value << 클래스명, 아이디명 in CSS
+      // 헝가리안 표기법
+      // numTempLetValue
+
+      // 이상 원시 타입
+
+      let num1 = 16;
+      let num2 = 5;
+      console.log(num1 % num2);
+      console.log("문자열" + "문자열");
+      console.log(true + 3);
+      let num3 = num1 + num2;
+      console.log("문자열" + num1 + num2);
+      console.log(0.000000000000000000000001);
+      console.log(0.999999999999999999999999);
+      console.log("\{\u3AA1\}");
+    </script>
+  </body>
+</html>
