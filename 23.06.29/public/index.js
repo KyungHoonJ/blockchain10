@@ -206,3 +206,12 @@ while (num1 < 10) {
   }
   num1 += 1;
 }
+
+num1 = num2 = 2;
+while (num1 < 10) {
+  console.log(num1 + " * " + num2 + " = " + num1 * num2++);
+  if (num2 > 9) {
+    num1 += 1;
+    num2 = 2;
+  }
+}
