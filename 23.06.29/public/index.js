@@ -1,5 +1,3 @@
-console.log("git testing");
-
 console.log(1 + 2); // 3
 console.log(0 - 2); // -2
 console.log(3 + "123"); // 3123
