@@ -1,0 +1,25 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+    <script>
+      let count = 0;
+      function increase() {
+        count += 1;
+        document.getElementById("count").innerHTML = count;
+      }
+      function decrease() {
+        count -= 1;
+        document.getElementById("count").innerHTML = count;
+      }
+    </script>
+  </head>
+  <body>
+    <button id="test">start</button>
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+    <div id="count"></div>
+    <script src="public/index.js"></script>
+  </body>
+</html>
