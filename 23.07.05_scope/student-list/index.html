@@ -15,6 +15,10 @@
       thead tr {
         background-color: lightgray;
       }
+      #name,
+      #age {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -23,8 +27,8 @@
         <thead>
           <tr>
             <th>Num</th>
-            <th>이름</th>
-            <th>나이</th>
+            <th id="name">이름</th>
+            <th id="age">나이</th>
             <th>취미</th>
           </tr>
         </thead>
@@ -75,9 +79,18 @@
         tempAge.innerHTML = student.age;
 
         student.hobby.forEach((item) => {
+          const hobbyLinkElem = document.createElement("a");
           const hobbyElem = document.createElement("div");
           hobbyElem.innerHTML = item;
-          tempHobby.append(hobbyElem);
+          hobbyLinkElem.target = "_blank";
+          hobbyLinkElem.href =
+            "https://www.google.com/search?q=" +
+            item +
+            "&oq=" +
+            item +
+            "&aqs=chrome..69i57j0i512l9.2616j1j4&sourceid=chrome&ie=UTF-8";
+          hobbyLinkElem.append(hobbyElem);
+          tempHobby.append(hobbyLinkElem);
         });
       }
 
@@ -88,16 +101,30 @@
       //     addStudent(idx + 1, item);
       //   });
 
-      function sortName(isSorted) {
+      function sortStudents(property, isSorted) {
         studentsElem.innerHTML = "";
         students.sort((a, b) => {
-          return a.name > b.name ? 1 * isSorted : -1 * isSorted;
+          return (a[property] > b[property] ? 1 : -1) * isSorted;
         });
         for (let i = 0; i < students.length; ++i) {
           addStudent(i + 1, students[i]);
         }
       }
-      sortName(-1);
+
+      let isSortName = 0;
+      let isSortAge = 0;
+      document.getElementById("name").onclick = () => {
+        isSortAge = 0;
+        if (isSortName < 1) isSortName = 1;
+        else if (isSortName > 0) isSortName = -1;
+        sortStudents("name", isSortName);
+      };
+      document.getElementById("age").onclick = () => {
+        isSortName = 0;
+        if (isSortAge < 1) isSortAge = 1;
+        else if (isSortAge > 0) isSortAge = -1;
+        sortStudents("age", isSortAge);
+      };
     </script>
   </body>
 </html>
