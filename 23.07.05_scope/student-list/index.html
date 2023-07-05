@@ -1,0 +1,103 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>출석부</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 1rem 2rem;
+        border: 1px solid black;
+      }
+      thead tr {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <table>
+        <thead>
+          <tr>
+            <th>Num</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>취미</th>
+          </tr>
+        </thead>
+        <tbody id="students"></tbody>
+      </table>
+    </div>
+    <script>
+      function Student(name, age, hobby) {
+        this.name = name;
+        this.age = age;
+        this.hobby = [];
+        if (typeof hobby == "object") {
+          this.hobby = hobby;
+        } else {
+          this.hobby.push(hobby);
+        }
+      }
+      const students = [
+        new Student("강수빈", 26, ["애니 감상", "달리기", "팔굽혀펴기"]),
+        new Student("임태훈", 28, "영화감상"),
+        new Student("양원철", 28, "골프"),
+        new Student("이선균", 30, "맛집 탐방"),
+        new Student("김호현", 26, ["국내 여행", "세계 투어"]),
+        new Student("황현준", 28, "드라이브"),
+        new Student("김보람", 30, "일기 쓰기"),
+        new Student("이은재", 24, "독서"),
+        new Student("정승교", 24, "자전거 타기"),
+        new Student("박상현", 30, "농구"),
+        new Student("전상민", 32, ["분석", null]),
+        new Student("김지훈", 26, "유튜브 보기"),
+      ];
+      console.log(students);
+
+      const studentsElem = document.getElementById("students");
+      function addStudent(number, student) {
+        const tempTr = document.createElement("tr");
+        const tempNum = document.createElement("td");
+        const tempName = document.createElement("td");
+        const tempAge = document.createElement("td");
+        const tempHobby = document.createElement("td");
+        tempTr.append(tempNum);
+        tempTr.append(tempName);
+        tempTr.append(tempAge);
+        tempTr.append(tempHobby);
+        studentsElem.append(tempTr);
+        tempNum.innerHTML = number;
+        tempName.innerHTML = student.name;
+        tempAge.innerHTML = student.age;
+
+        student.hobby.forEach((item) => {
+          const hobbyElem = document.createElement("div");
+          hobbyElem.innerHTML = item;
+          tempHobby.append(hobbyElem);
+        });
+      }
+
+      for (let i = 0; i < students.length; ++i) {
+        addStudent(i + 1, students[i]);
+      }
+      //   students.forEach((item, idx) => {
+      //     addStudent(idx + 1, item);
+      //   });
+
+      function sortName(isSorted) {
+        studentsElem.innerHTML = "";
+        students.sort((a, b) => {
+          return a.name > b.name ? 1 * isSorted : -1 * isSorted;
+        });
+        for (let i = 0; i < students.length; ++i) {
+          addStudent(i + 1, students[i]);
+        }
+      }
+      sortName(-1);
+    </script>
+  </body>
+</html>
