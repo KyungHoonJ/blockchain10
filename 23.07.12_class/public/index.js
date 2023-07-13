@@ -56,7 +56,7 @@ const count2 = new Counter2("자식 클래스");
 function CounterFunc(name) {
   this.count = 0;
   this.name = name;
-  this.#test = "";
+  //   this.#test = "";
   //   this.inincrease = function () {
   //     this.count += 1;
   //   };
