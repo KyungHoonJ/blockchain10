@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 1920px;
+}
+
+.container {
+  padding: 0 350px;
+}
+
+.anim {
+  transition: transform 1s linear, opacity 1s linear;
+}
+
+.off {
+  transform: translateY(3rem);
+  opacity: 0 !important;
+}

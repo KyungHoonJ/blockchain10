@@ -1,0 +1,141 @@
+#review {
+  background-color: blueviolet;
+  color: white;
+  padding: 8rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#review > h1 {
+  font-size: 1.3rem;
+  /* font-weight: 900; */
+  text-align: center;
+}
+
+#review > h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#review .reviews {
+  height: 25rem;
+  margin: 8rem 0;
+}
+
+#review .reviews::before {
+  content: "";
+  height: 30rem;
+  background: linear-gradient(
+    to right,
+    blueviolet 0%,
+    rgba(138, 43, 226, 0) 10%,
+    rgba(138, 43, 226, 0) 90%,
+    blueviolet 100%
+  );
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  /* display: block; */
+}
+
+#review .reviews > div {
+  display: flex;
+  gap: 2.5rem;
+  /* transform: translateX(-50%); */
+  animation: flow 12.5s linear infinite;
+  position: absolute;
+  padding-right: 2.5rem;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#review .reviews .item {
+  position: relative;
+  animation: wave 5s ease infinite;
+}
+
+@keyframes wave2 {
+  0% {
+    transform: translateY(30%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30%);
+  }
+}
+
+#review .reviews .item:nth-child(2n) {
+  animation: wave2 5s ease infinite;
+}
+
+#review .reviews .item > img {
+  width: 25rem;
+}
+
+#review .reviews .item > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4rem 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+#review .reviews .item div img {
+  width: 9rem;
+}
+
+#review .reviews .item div .picture {
+  width: 7rem;
+  height: 7rem;
+  background-color: red;
+  position: absolute;
+  bottom: 5rem;
+  right: 2rem;
+  border-radius: 5rem;
+}
+
+#review .reviews p {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+#review .reviews p:nth-child(3) {
+  padding: 3rem 0 2rem;
+  font-size: 1rem;
+  color: #6842ff;
+}
+
+#review > button {
+  color: white;
+  width: 15rem;
+  height: 4rem;
+  background-color: darkblue;
+  /* text-align: center; */
+  border-radius: 7rem;
+  border: none;
+  display: block;
+  margin: auto;
+}

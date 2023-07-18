@@ -1,0 +1,236 @@
+#why {
+  margin: 7rem 0;
+}
+
+#why h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: blueviolet;
+  margin: 4rem 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  6% {
+    transform: translateY(-17.5%);
+  }
+  33.3% {
+    transform: translateY(-17.5%);
+  }
+  39.3% {
+    transform: translateY(-35%);
+  }
+  66.6% {
+    transform: translateY(-35%);
+  }
+  72.6% {
+    transform: translateY(-52%);
+  }
+  100% {
+    transform: translateY(-52%);
+  }
+}
+
+#why .slide {
+  height: 14rem;
+  overflow: hidden;
+  /* background-color: aqua; */
+  /* animation: slide 2s linear; */
+}
+
+#why .slide div {
+  animation: slide 5s linear infinite;
+}
+
+#why .slide h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: darkblue;
+  opacity: 0.1;
+}
+
+@keyframes text1 {
+  0% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  6% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  33.3% {
+  }
+  39.3% {
+  }
+  66.6% {
+  }
+  72.6% {
+  }
+  100% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+}
+
+#why .slide div h2:nth-child(2) {
+  animation: text1 5s linear infinite;
+}
+
+@keyframes text2 {
+  0% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  6% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  33.3% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  39.3% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  66.6% {
+  }
+  72.6% {
+  }
+  100% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+}
+
+#why .slide div h2:nth-child(3) {
+  animation: text2 5s linear infinite;
+}
+
+@keyframes text3 {
+  0% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  6% {
+  }
+  33.3% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  39.3% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  66.6% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  72.6% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  100% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+}
+
+#why .slide div h2:nth-child(4) {
+  animation: text3 5s linear infinite;
+}
+
+@keyframes text4 {
+  0% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  6% {
+  }
+  33.3% {
+  }
+  39.3% {
+  }
+  66.6% {
+    opacity: 0.1;
+    font-size: 2.5rem;
+  }
+  72.6% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 2.6rem;
+  }
+}
+
+#why .slide div h2:nth-child(5) {
+  animation: text4 5s linear infinite;
+}
+
+#why .buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#why .buttons .item {
+  width: 32%;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 3rem;
+  text-align: center;
+  background-color: skyblue;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset -0.5rem -0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+#why .buttons .item:nth-child(2n) {
+  background-color: pink;
+}
+
+#why .buttons .item p {
+  font-weight: 900;
+}
+
+#why .buttons .item > p {
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+#why .buttons .item div {
+  position: absolute;
+  top: 0;
+  height: 15rem;
+  background-color: white;
+  width: 100%;
+  border-radius: 3rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#why .buttons .item div:hover {
+  opacity: 1;
+}
+
+#why .buttons .item div p {
+  font-size: 1.2rem;
+}
+
+#why .buttons .item div img {
+  width: 10rem;
+  margin: 1.5rem;
+}
