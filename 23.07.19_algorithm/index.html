@@ -22,25 +22,45 @@
       //   updown 게임, 1~100까지의 수를 하나를생가합니다.
       //     => 100, 50, 25, 12, 6, 3, 2, 1 / 8
       //     => 1000, 500, 250, 125, 62, 31, 15, 7, 3, 2, 1 / 11
+      function getAverage(...numbers) {
+        return parseInt(numbers.reduce((prev, curr) => curr + prev, 0) / 2);
+      }
       function updown(n, answer) {
         // 1~n까지의 수중 answer를 맞추기 위한 횟수는?
         // let temp = n,
         //   temp2 = 0;
         // count = 0;
         // while (temp + temp2 != answer) {
-        //   temp = parseInt(temp / 2);
         //   if (temp + temp2 < answer) temp2 = temp + temp2;
+        //   temp = parseInt(temp / 2);
+        //   console.log(temp, temp2);
         //   count++;
         // }
-        let prev = n,
-          curr = n / 2,
-          count = 1;
+        // let prev = n,
+        //   curr = n / 2,
+        //   count = 1;
+        // while (curr != answer) {
+        //   let temp;
+        //   if (curr < answer) temp = parseInt((prev + curr) / 2);
+        //   else temp = parseInt(curr / 2);
+        //   prev = curr;
+        //   curr = temp;
+        //   count++;
+        // }
+        let start = 0,
+          end = n,
+          curr = getAverage(start, end),
+          count = 0;
+
         while (curr != answer) {
-          let temp;
-          if (curr < answer) temp = parseInt((prev + curr) / 2);
-          else temp = parseInt(curr / 2);
-          prev = curr;
-          curr = temp;
+          if (answer < curr) {
+            end = curr;
+            curr = getAverage(start, curr);
+          } else {
+            start = curr;
+            curr = getAverage(curr, end);
+          }
+          console.log(start, curr, end);
           count++;
         }
         return count;
@@ -50,7 +70,7 @@
         // temp = temp / 2;
         // if (temp == answer) return 3;
       }
-      console.log(updown(100, 37));
+      console.log(updown(100, 24));
 
       // O(n^2)
       function bigOn2(...arr) {
