@@ -53,7 +53,8 @@
           count = 0;
 
         while (curr != answer) {
-          if (answer < curr) {
+          if (start == curr) curr++;
+          else if (answer < curr) {
             end = curr;
             curr = getAverage(start, curr);
           } else {
@@ -70,7 +71,7 @@
         // temp = temp / 2;
         // if (temp == answer) return 3;
       }
-      console.log(updown(100, 24));
+      console.log(updown(100, 100));
 
       // O(n^2)
       function bigOn2(...arr) {
