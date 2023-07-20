@@ -1,0 +1,27 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble</title>
+  </head>
+  <body>
+    <script src="../swap.js"></script>
+    <script src="../test.js"></script>
+    <script>
+      console.log(arr);
+      const sortBubble = (arr) => {
+        const tempArr = [...arr];
+        for (let i = 0; i < tempArr.length; i++) {
+          for (let j = 0; j < tempArr.length - 1; j++) {
+            if (tempArr[j] > tempArr[j + 1]) swap(tempArr, j, j + 1);
+          }
+        }
+        return tempArr;
+      };
+      console.time("sortBubble");
+      console.log(sortBubble(arr));
+      console.timeEnd("sortBubble");
+      // 24975.33203125
+    </script>
+  </body>
+</html>
