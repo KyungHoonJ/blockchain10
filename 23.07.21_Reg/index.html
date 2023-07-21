@@ -1,0 +1,102 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression</title>
+  </head>
+  <body>
+    <h1>정규표현식</h1>
+    <p>특정한 규칙을 가진 문자열의 집합을 표현하는데 사용하는 형식 언어</p>
+    <script>
+      const str =
+        "seaukhrewuq;bvro;sancrusaenbvrlkeasbcrsyjkveabvt.keasjiulxresbr";
+      //   while (true) {
+      //     let tempIdx = str.indexOf("a");
+      //     console.log(tempIdx);
+      //     if (tempIdx < 0) break;
+      //   }
+      //   if (str.indexOf("@") > 0) {
+      //     if (str.indexOf(".") > 0) {
+      //       if (str.indexOf("@") < str.indexOf(".")) {
+      //         sae.trasr@naver.com
+      //       }
+      //     }
+      //   }
+
+      const reg1 = /정규표현식/;
+      const reg2 = new RegExp("정규표현식");
+
+      console.log("저는 정규표현식을 사용하고 있습니다.".match(reg1));
+      console.log(
+        "저는 정규표현식을 사용하고 있습니다.".replace(reg1, "정규식")
+      );
+
+      const three = /[3,6,9]/g;
+      console.log("9387394967394397531".match(three));
+      const korean = /[ㄱ-ㅎㅏ-ㅣ가-힣]/;
+      console.log(korean.exec("뷁"));
+
+      const infoReg = /^i'm/i;
+      console.log(infoReg.test("I'm 정경훈"));
+
+      const plusReg = /a+/gi;
+      console.log("Aabtesitaerign Aeinwsii aaaaa".match(plusReg));
+
+      const questionReg = /a?/g;
+      console.log("Aabtesitaerign Aeinwsii aaaaa".match(questionReg));
+
+      const starReg = /a*/gi;
+      console.log("Aabtesitaerign Aeinwsii aaaaa".match(starReg));
+
+      const endReg = new RegExp("A\s", "gi");
+      console.log("AabtesitaerignA Aeinwsiia aaaaa".match(endReg));
+      const endReg1 = /A\s/gi;
+      console.log("AabtesitaerignA Aeinwsiia aaaaa".match(endReg1));
+
+      const countReg = /[a-z]{5}/;
+      console.log("aserd".match(countReg));
+
+      const countReg1 = /[a-z]{5,10}/;
+      console.log("512aseeaesarsbr".match(countReg1));
+
+      const numberReg = /\d+/;
+      console.log("serdfssad35421412sbrvesa".match(numberReg));
+
+      const numberReg1 = /\d+.[0-9]+/;
+      console.log("serdfssad35.421412sbrvesa".match(numberReg1));
+
+      const numberReg2 = /\D+/;
+      console.log("serdfssad35.421412sbrvesa".match(numberReg2));
+
+      const strReg = /\w+/;
+      console.log("ASfgwq185안녕34_sd4a5e".match(strReg));
+
+      const strReg1 = /\W+/;
+      console.log("ASfgwq185안녕34_sd4a5e".match(strReg1));
+
+      const spaceReg = /\s+/g;
+      console.log(
+        `ser  asre sar
+      as`.match(spaceReg)
+      );
+
+      const spaceReg1 = /\S+/g;
+      console.log(
+        `ser  asre sar
+      as`.match(spaceReg1)
+      );
+
+      const spetialReg = /[\@\#\$\%\@\^\\\/\-]/;
+
+      let emailReg =
+        /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,5}$/i;
+      // dsrtdry@sareesvrs
+      const phoneReg = /^(01[0-9]\-)([0-9]{3,4})(\-\d{4})$/;
+      console.log(phoneReg.test("010-1234-5678")); // true
+      console.log(phoneReg.test("016-234-5678")); // true
+      console.log(phoneReg.test("018-234-5678")); // true
+      console.log(phoneReg.test("011-234-5678")); // true
+      console.log(phoneReg.test("02-234-5678")); // false
+    </script>
+  </body>
+</html>
