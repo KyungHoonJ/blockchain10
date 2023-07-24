@@ -45,14 +45,14 @@ const temps = [
 const splitStr = "/,/,/,";
 
 // localStorage.clear();
-localStorage.setItem("numbers", [1, 2].join(splitStr));
-localStorage.setItem("titles", ["안녕~,확인중", "확인중"].join(splitStr));
-localStorage.setItem("users", ["정경훈", "확인중"].join(splitStr));
-localStorage.setItem("texts", ["내용", "확인중"].join(splitStr));
-localStorage.setItem("createdAts", [Date.now(), Date.now()].join(splitStr));
-localStorage.setItem("views", [0, 0].join(splitStr));
-localStorage.setItem("likes", [0, 0].join(splitStr));
-localStorage.setItem("comments", [[], []].join(splitStr));
+// localStorage.setItem("numbers", [1, 2].join(splitStr));
+// localStorage.setItem("titles", ["안녕~,확인중", "확인중"].join(splitStr));
+// localStorage.setItem("users", ["정경훈", "확인중"].join(splitStr));
+// localStorage.setItem("texts", ["내용", "확인중"].join(splitStr));
+// localStorage.setItem("createdAts", [Date.now(), Date.now()].join(splitStr));
+// localStorage.setItem("views", [0, 0].join(splitStr));
+// localStorage.setItem("likes", [0, 0].join(splitStr));
+// localStorage.setItem("comments", [[], []].join(splitStr));
 // console.log(localStorage.getItem("list"));
 
 // const numbers = localStorage.getItem("numbers");
@@ -98,7 +98,10 @@ for (let i = 0; i < list.numbers.length; ++i) {
   const tr = document.createElement("tr");
   thList.forEach((item) => {
     const td = document.createElement("td");
-    td.innerHTML = list[item][i];
+    if (item == "titles") td.classList.add("title");
+    if (item == "createdAts")
+      td.innerHTML = new Date(+list[item][i]).toLocaleString();
+    else td.innerHTML = list[item][i];
     tr.append(td);
   });
   listElem.append(tr);
