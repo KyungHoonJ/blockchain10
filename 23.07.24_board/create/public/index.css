@@ -1,0 +1,17 @@
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  min-height: 10rem;
+  resize: none;
+}
+
+#root div {
+  margin: 1rem 0;
+}
+
+#title {
+  font-size: 2rem;
+}

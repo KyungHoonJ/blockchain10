@@ -64,13 +64,15 @@ const splitStr = "/,/,/,";
 // const likes = localStorage.getItem("likes");
 // // const comments = localStorage.getItem("comments");
 
+// console.log(localStorage.getItem("numbers"));
+
 const list = {
-  numbers: localStorage.getItem("numbers").split(splitStr),
-  titles: localStorage.getItem("titles").split(splitStr),
-  users: localStorage.getItem("users").split(splitStr),
-  createdAts: localStorage.getItem("createdAts").split(splitStr),
-  views: localStorage.getItem("views").split(splitStr),
-  likes: localStorage.getItem("likes").split(splitStr),
+  numbers: localStorage.getItem("numbers")?.split(splitStr) || [],
+  titles: localStorage.getItem("titles")?.split(splitStr) || [],
+  users: localStorage.getItem("users")?.split(splitStr) || [],
+  createdAts: localStorage.getItem("createdAts")?.split(splitStr) || [],
+  views: localStorage.getItem("views")?.split(splitStr) || [],
+  likes: localStorage.getItem("likes")?.split(splitStr) || [],
 };
 console.log(list);
 
