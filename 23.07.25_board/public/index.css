@@ -1,0 +1,49 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+col.number {
+  width: 5%;
+}
+col.title {
+  width: 45%;
+}
+col.user {
+  width: 20%;
+}
+col.created-at {
+  width: 20%;
+}
+col.views {
+  width: 5%;
+}
+col.likes {
+  width: 5%;
+}
+
+th {
+  border-bottom: 2px solid black;
+}
+
+td {
+  /* border: 1px solid black; */
+  border-bottom: 1px dashed black;
+  text-align: center;
+}
+
+th,
+td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+td.title {
+  text-align: start;
+}
+
+td {
+  padding: 0.5rem 1rem;
+}

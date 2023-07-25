@@ -1,0 +1,37 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div class="header">
+          <h1 id="title"></h1>
+          <div>
+            <div class="flex-box">
+              <h3 id="user"></h3>
+              <button id="likes"></button>
+              <div id="views"></div>
+            </div>
+            <div id="created-at"></div>
+          </div>
+        </div>
+        <p id="text"></p>
+      </div>
+      <div>
+        <div>
+          <ul id="list"></ul>
+        </div>
+        <div>
+          <input type="text" id="comment" placeholder="Comment" />
+          <input type="text" id="comment-user" placeholder="User" />
+          <button id="add-comment">Add Comment</button>
+        </div>
+      </div>
+    </div>
+    <script src="./public/index.js"></script>
+  </body>
+</html>

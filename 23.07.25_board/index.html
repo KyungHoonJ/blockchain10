@@ -1,0 +1,41 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+    <link rel="stylesheet" href="./public/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <a href="./create">
+          <button>Create</button>
+        </a>
+      </div>
+      <div>
+        <table>
+          <colgroup>
+            <col class="number" />
+            <col class="title" />
+            <col class="user" />
+            <col class="created-at" />
+            <col class="views" />
+            <col class="likes" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Num</th>
+              <th>Title</th>
+              <th>User</th>
+              <th>Created At</th>
+              <th>Views</th>
+              <th>Likes</th>
+            </tr>
+          </thead>
+          <tbody id="list"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./public/index.js"></script>
+  </body>
+</html>
